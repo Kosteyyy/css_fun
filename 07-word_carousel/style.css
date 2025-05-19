@@ -1,0 +1,46 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+:root {
+  --bg-word: rgb(12, 123, 249);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container h1::after {
+  content: "";
+  background: var(--bg-word);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  animation: swap 6s infinite;
+  margin-left: 10px;
+}
+
+@keyframes swap {
+  0% {
+    content: "работу";
+  }
+  25% {
+    content: "ракеты";
+  }
+  50% {
+    content: "кофе";
+  }
+  75% {
+    content: "лето";
+  }
+  100% {
+    content: "работу";
+  }
+}
