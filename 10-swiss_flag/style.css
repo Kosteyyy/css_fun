@@ -1,0 +1,38 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --white: #fff;
+    --red: red;
+    --flag-width: 600px;
+}
+
+.container, .flag {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: beige;
+}
+
+.flag {
+    width: var(--flag-width);
+    height: var(--flag-width);
+    background: var(--red);
+    position: relative;
+}
+
+.rect {
+    position: absolute;
+    background: var(--white);
+    width: calc(var(--flag-width) * 5 / 8);
+    height: calc(var(--flag-width) * 3 / 16);
+}
+
+.vertical {
+    transform: rotate(90deg);
+}

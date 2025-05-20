@@ -1,0 +1,46 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --white: #fff;
+    --red: red;
+    --green: green;
+
+    --flag-width: 600px;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: beige;
+}
+
+.flag {
+    width: var(--flag-width);
+    height: calc(var(--flag-width) / 3 * 2);
+    display: flex;
+}
+
+.white {
+    background: var(--white);
+    height: 100%;
+    width: calc(var(--flag-width) / 3);
+}
+
+.red {
+    background: var(--red);
+    height: 50%;
+    width: calc(var(--flag-width) / 3 * 2);
+}
+
+.green {
+    background: var(--green);
+    height: 50%;
+    width: calc(var(--flag-width) / 3 * 2);
+}
