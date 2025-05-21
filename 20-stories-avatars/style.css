@@ -1,0 +1,73 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: var(--bg-main);
+}
+
+:root {
+    --font-color: #fff;
+    --grad1: #feda75;
+    --grad2: #fa7e1e;
+    --grad3: #d62976;
+    --grad4: #962fbf;
+    --grad5: #4f5bd5;
+    --viewed: gray;
+    --bg-main: #000;
+    --bg-live: red;
+}
+
+ul.stories-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 2em;
+    color: var(--font-color);
+}
+
+li.story {
+    font-size: 1.25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.img-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: white;
+    padding:6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.img-wrapper img {
+    max-width: 100%;
+    border-radius: 50%;
+    border: 3px solid var(--bg-main)
+}
+
+.new > .img-wrapper {
+    background: linear-gradient(to top right, var(--grad1), var(--grad2), var(--grad3), var(--grad4), var(--grad5) );
+}
+.viewed > .img-wrapper {
+    background: var(--viewed);
+}
+
+.live::after {
+    content: 'LIVE';
+    font-size: .5em;
+    font-weight: bold;
+    background: var(--bg-live);
+    border: 2px solid black;
+    border-radius: 4px;
+    width: 22px;
+    padding: 2px 4px;
+    position: absolute;
+    top: 48%;
+
+}

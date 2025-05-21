@@ -1,0 +1,52 @@
+html, body {
+    margin: 0;padding: 0;
+}
+
+:root {
+    --bg-stage-1: red;
+    --bg-stage-2: orange;
+    --bg-stage-3: aqua;
+    --bg-stage-4: green;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-bar {
+    width: 200px;
+    height: 20px;
+    /* border: 1px solid grey; */
+    border-radius: 20px;
+    background-color: grey;
+
+}
+
+.prog-status {
+    height: 100%;
+    border-radius: 20px;
+}
+
+.stage-1 {
+    width: 25%;
+    background-color: var(--bg-stage-1);
+}
+.stage-2 {
+    width: 50%;
+    background-color: var(--bg-stage-2);
+}
+.stage-3 {
+    width: 75%;
+    background-color: var(--bg-stage-3);
+}
+.stage-4 {
+    width: 100%;
+    background-color: var(--bg-stage-4);
+}
+
+
+

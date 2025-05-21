@@ -1,0 +1,46 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --toggle-bg: rgb(248, 218, 218);
+    --toggle-border: black;
+    --toggle-switch-bg: black;
+    --toggle-width: 100px;
+    --circle-size: 40px;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label.toggle {
+    width: var(--toggle-width);
+    height: var(--circle-size);
+    border: 4px solid var(--toggle-border);
+    border-radius: calc(var(--circle-size));
+    padding: .25em;
+    background:var(--toggle-bg);
+}
+
+.toggle input {
+    display: none;
+}
+
+.toggle-switch {
+    border-radius: 50%;
+    background-color: var(--toggle-switch-bg);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    transition: all .5s;
+}
+
+.toggle-input:checked ~ .toggle-switch {
+    transform: translateX(calc(var(--toggle-width) - var(--circle-size)));
+}

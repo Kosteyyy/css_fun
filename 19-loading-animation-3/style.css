@@ -1,0 +1,38 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --loader-segment-color: #060ce9;
+    --loader-color: #d6d7f5;
+    --loader-size: 100px;
+    --loader-thickness: 20px;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    width: var(--loader-size);
+    height: var(--loader-size);
+    border-radius: var(--loader-size);
+    border: var(--loader-thickness) solid var(--loader-color);
+    border-top: var(--loader-thickness) solid var(--loader-segment-color);
+    animation: spin infinite linear 1.5s;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+
+
